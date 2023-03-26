@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Roc8-captcha</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h2>Sign Up Form</h2>
+        <div class="form-email">
+          <label for="">Email:</label>
+          <input type="email" />
+        </div>
+        <div class="form-password">
+          <label for="">Password:</label>
+          <input type="password" />
+        </div>
+        <label for="captcha" class="captcha">Enter Captcha:</label>
+        <div class="form-captcha">
+          <input type="text" readonly class="captcha-text" id="capt" />
+          <input type="text" id="text-input" name="captcha" required />
+        </div>
+        <h6>
+          Captcha not visible? Refresh
+          <img src="./refresh-icon.png" alt="" onclick="generateCaptcha()" />
+        </h6>
+        <button onclick="validCaptcha()" class="signup-btn" type="submit">
+          Sign Up
+        </button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
